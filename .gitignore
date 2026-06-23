@@ -218,3 +218,4 @@ __marimo__/
 .streamlit/secrets.toml
 /data/Run200_Wave_0_1.txt
 /data/test-dataset.ipynb
+/data/Run200_Wave_0_1_preprocessed.parquet
