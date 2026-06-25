@@ -24,5 +24,4 @@ dependencies = [
     "ruff>=0.15.2",
     "notebook>=7.5.6",
     "kaggle>=2.1.2",
-    "skops>=0.14.0",
 ]
