@@ -10,6 +10,8 @@ basic_line = dict(**thin, color='lightslategrey')
 highlight_line = dict(**highlight, color='salmon')
 signals_title = dict(title='Signals')
 red_dash = dict(color='r', linestyle='--', linewidth=0.5)
+split_line = dict(color='blue', linestyle='--', linewidth=0.5)
+markers = dict(s=0.5, alpha=0.25)
 
 
 def set_axis_labels(ax):
