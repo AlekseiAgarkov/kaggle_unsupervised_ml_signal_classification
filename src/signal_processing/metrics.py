@@ -5,6 +5,9 @@ from sklearn.mixture import GaussianMixture
 
 
 def eval_metrics(arr, bins=100):
+    """
+    Расчёт метрик Figure of Merit, Calinski-Harabasz Score, Silhouette Score.
+    """
     arr = arr[~np.isnan(arr) & ~np.isinf(arr)]
     counts, bin_arr = np.histogram(arr, bins=bins)
 

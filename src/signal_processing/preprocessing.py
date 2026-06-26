@@ -21,6 +21,9 @@ def filter_signal_end_to_window(arr, window_size):
 def calc_base_signal_components(row,
                                 start_idx: int = 140,
                                 end_offset=5):
+    """
+    Расчёт базовых компонентов сигнала.
+    """
     arr = row['data_array']
     if row.name == 1929:
         arr = row['data_array'][:300]

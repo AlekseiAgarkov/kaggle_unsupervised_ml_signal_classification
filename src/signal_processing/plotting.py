@@ -18,11 +18,17 @@ markers = dict(s=0.5, alpha=0.25)
 
 
 def set_axis_labels(ax):
+    """
+    Именование осей
+    """
     ax.set_xlabel(x_label)
     ax.set_ylabel(y_label)
 
 
 def plot_plain_signal(signal, title, xlim=None, ylim=None, **kwargs):
+    """
+    Визуализация сигналов.
+    """
     ax = signal.plot(title=title, **wide_plt, **kwargs)
     ax.set_xlabel("Time, ns")
     ax.set_ylabel("Bit ADC")
@@ -35,10 +41,16 @@ def plot_plain_signal(signal, title, xlim=None, ylim=None, **kwargs):
 
 
 def ax_off(ax):
+    """
+    Отключение осей
+    """
     ax.axis("off")
 
 
 def plot_hist(df, col, bins, ax, title, ymax=None, ax_zoom=None):
+    """
+    Базовая гистограмма
+    """
     ax.hist(df[col], bins=bins)
     ax.set_title(title, **small_font)
     if ymax is not None and ax_zoom is not None:
@@ -48,16 +60,25 @@ def plot_hist(df, col, bins, ax, title, ymax=None, ax_zoom=None):
 
 
 def plot_corr_m(df):
+    """
+    Матрица корреляций признаков
+    """
     components = df.columns.tolist()
+
     plt.imshow(df[components].corr(), aspect='auto')
     plt.colorbar(label='Коэффициент корреляции')
+
     plt.xticks(range(len(components)), components, rotation=30)
     plt.yticks(range(len(components)), components)
     plt.title('Корреляционная матрица компонентов сигнала', fontsize=14)
+
     plt.show()
 
 
 def plot_eval_hist(arr, title, x_label, bins=100):
+    """
+    Вывод гистограммы с наложением GaussianMixture и границы разделения кластеров.
+    """
     metrics = eval_metrics(arr, bins=bins)
 
     counts = metrics["counts"]
