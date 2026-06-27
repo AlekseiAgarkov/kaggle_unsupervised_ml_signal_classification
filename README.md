@@ -149,3 +149,8 @@ submitter = KaggleSubmitter(competition="signal-types-classification")
 best_submission_kaggle_info = submitter.get_submission_by_hash("some_hash")
 print(best_submission_kaggle_info)
 ```
+
+### Подготовка датасета
+
+Датасет проекта не представлен в репозитории. Вам нужно его скачать, а файл `Run200_Wave_0_1.txt` скопировать в
+папку `/data`.
