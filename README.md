@@ -145,6 +145,7 @@ Kaggle Submitter Module - это модуль для автоматическо�
 
 ```python
 from src.submission.kaggle_integration import KaggleSubmitter
+
 submitter = KaggleSubmitter(competition="signal-types-classification")
 best_submission_kaggle_info = submitter.get_submission_by_hash("some_hash")
 print(best_submission_kaggle_info)
@@ -158,3 +159,17 @@ print(best_submission_kaggle_info)
 Датасет с предподготовленными данными формируется
 в [1_Exploratory_Data_Analysis.ipynb](notebooks%2F1_Exploratory_Data_Analysis.ipynb) и сохранён
 в [Run200_Wave_0_1_base_features.parquet](data%2FRun200_Wave_0_1_base_features.parquet).
+
+### Воспроизведение
+
+Все три ноутбука, при желании, можно перезапустить.
+
+Примечания:
+
+- ноутбуку [1_Exploratory_Data_Analysis.ipynb](notebooks%2F1_Exploratory_Data_Analysis.ipynb) требуется
+  датасет `Run200_Wave_0_1.txt`.
+- ноутбук [2_PSD_Parameter_Tuning.ipynb](notebooks%2F2_PSD_Parameter_Tuning.ipynb) будет работать около 15 минут, для
+  его запуска нужны данные [Run200_Wave_0_1_base_features.parquet](data%2FRun200_Wave_0_1_base_features.parquet)
+- ноутбуку [3_Clustering.ipynb](notebooks%2F3_Clustering.ipynb) для запуска нужны
+  данные [Run200_Wave_0_1_base_features.parquet](data%2FRun200_Wave_0_1_base_features.parquet) и преднастроенное
+  окружение Kaggle (учтите, что отправка в конце будет сделана с Вашего аккаунта).
