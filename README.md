@@ -88,3 +88,40 @@
 * Комментарии и пояснения к коду;
 * Выводы к каждому этапу (анализ данных, предобработка, обучение);
 * Код должен быть чистым и читаемым.
+
+## Установка 
+
+### Подготовка проекта
+
+Склонируйте репозиторий:
+
+```shell
+git clone https://github.com/AlekseiAgarkov/kaggle_unsupervised_ml_signal_classification.git
+cd kaggle_unsupervised_ml_signal_classification
+```
+
+Установите uv: [Installing uv](https://docs.astral.sh/uv/getting-started/installation/)
+
+Запустите:
+
+```shell
+uv venv --python 3.11
+```
+
+Активация Linux/Mac:
+
+```shell
+source .venv/bin/activate
+```
+
+Активация в Windows:
+
+```shell
+.venv\Scripts\activate
+```
+
+Установите зависимости:
+
+```shell
+uv pip install -e .
+```
