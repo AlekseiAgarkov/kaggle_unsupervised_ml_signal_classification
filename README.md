@@ -154,3 +154,7 @@ print(best_submission_kaggle_info)
 
 Датасет проекта не представлен в репозитории. Вам нужно его скачать, а файл `Run200_Wave_0_1.txt` скопировать в
 папку `/data`.
+
+Датасет с предподготовленными данными формируется
+в [1_Exploratory_Data_Analysis.ipynb](notebooks%2F1_Exploratory_Data_Analysis.ipynb) и сохранён
+в [Run200_Wave_0_1_base_features.parquet](data%2FRun200_Wave_0_1_base_features.parquet).
