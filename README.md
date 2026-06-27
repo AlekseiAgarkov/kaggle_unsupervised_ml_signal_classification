@@ -89,7 +89,7 @@
 * Выводы к каждому этапу (анализ данных, предобработка, обучение);
 * Код должен быть чистым и читаемым.
 
-## Установка 
+## Установка
 
 ### Подготовка проекта
 
@@ -124,4 +124,28 @@ source .venv/bin/activate
 
 ```shell
 uv pip install -e .
+```
+
+## Конфигурация Kaggle Submitter Module
+
+Kaggle Submitter Module - это модуль для автоматической отправки сабмишнов в Kaggle и взаимодействия с метаданными
+моделей.
+
+### Создание API ключ на Kaggle
+
+Создайте API ключ на Kaggle:
+
+1. Зайдите в Settings -> API
+2. Нажмите "Create New API Token"
+3. Следуйте инструкции с сохранением API Token'а в ~/.kaggle/
+
+### Использование
+
+Минимальный пример использования KaggleSubmitter:
+
+```python
+from src.submission.kaggle_integration import KaggleSubmitter
+submitter = KaggleSubmitter(competition="signal-types-classification")
+best_submission_kaggle_info = submitter.get_submission_by_hash("some_hash")
+print(best_submission_kaggle_info)
 ```
